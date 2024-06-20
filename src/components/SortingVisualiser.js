@@ -19,7 +19,7 @@ const SortingVisualizer = () => {
 
   const resetArray = () => {
     const array = [];
-    for (let i = 0; i < 50; i++) {
+    for (let i = 0; i < 30; i++) {
       array.push(randomIntFromInterval(5, 500));
     }
     setArray(array);
