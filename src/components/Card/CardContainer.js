@@ -7,7 +7,7 @@ const CardContainer = () => {
    const cards = [
       //  Bubble Sort
       {
-         title: 'Bubble Sort',
+         title: 'Bubble-Sort',
          description: {
             "procedure": "bubbleSort",
             "parameters": {
