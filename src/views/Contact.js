@@ -11,11 +11,11 @@ function Contact() {
                   <div className="contact-form-container">
                      <div className="contact-contents">
                         <h2>Send a Message</h2>
-                        <form action="https://api.web3forms.com/submit" method="POST">
-                           {/* Replace with your Access Key */}
+                        {/* <form action="https://api.web3forms.com/submit" method="POST">
+                           
                            <input type="hidden" name="access_key" value="383c919e-c791-4a9b-ad0c-d619b41f3dfb" />
 
-                           {/* Form Inputs. Each input must have a name="" attribute */}
+                          
                            <label htmlFor="name">Name:</label>
                            <input type="text" id="name" name="name" required />
 
@@ -26,7 +26,7 @@ function Contact() {
                            <textarea id="message" name="message" rows="4" required></textarea>
 
                            <button type="submit" className="btn-btn-color-1">Send</button>
-                        </form>
+                        </form> */}
                      </div>
                   </div>
                </section> </div>
