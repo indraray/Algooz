@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import './SortingVisualizer.css';
 import { bubbleSort } from '../algortihms/bubblesort';
 import { selectionSort } from '../algortihms/selectionsort';
@@ -13,17 +13,17 @@ const SortingVisualizer = () => {
   const [isSorting, setIsSorting] = useState(false);
   const speed = 50;
 
-  useEffect(() => {
-    resetArray();
-  },[]);
-
-  const resetArray = () => {
-    const array = [];
-    for (let i = 0; i < 50; i++) {
-      array.push(randomIntFromInterval(5, 500));
+  const resetArray = useCallback(() => {
+    const newArray = [];
+    for (let i = 0; i < 30; i++) {
+      newArray.push(randomIntFromInterval(5, 500));
     }
-    setArray(array);
-  };
+    setArray(newArray);
+  }, []);
+
+  useEffect(() => {
+    resetArray(); // Call resetArray in useEffect
+  }, [resetArray]);
 
   const randomIntFromInterval = (min, max) => {
     return Math.floor(Math.random() * (max - min + 1) + min);
